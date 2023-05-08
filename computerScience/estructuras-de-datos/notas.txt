@@ -1,0 +1,19 @@
+Las estructuras de datos son colecciones de valores, las relaciones entre ellos
+y las funciones u operaciones que se pueden aplicar a los datos
+
+slot de memoria = 1byte = 8 bits = 1 caracter
+
+arrays, listas ordenadas de datos. pueden ser estaticas o dinamicas, siendo (1):
+indicando la cantidad exacta de elementos que tendrà. De esa forma, podemos tener
+control de la cantidad de slots de memoria que podemos asignar y ya no podremos mutarlo,
+en el segundo caso, asignarà la cantidad "necesaria" de slots, usualmente se prepara con 
+el doble
+
+En lenguajes como C tú tienes que definir la cantidad de memoria que quieres reservar para ese array.
+Esto hace que su uso sea eficiente, pues la computadora no tiene que estar reservando más espacios
+“por si a caso”.
+.
+Un array dinámico reservará un poco más de espacio del que necesita, y cuando este espacio se acabe
+reservará aún más espacio. Recuerda que la computadora tiene que buscar slots consecutivos 
+disponibles para asignar ese espacio y mientras más información haya guardada más difícil será 
+encontrar este espacio.
