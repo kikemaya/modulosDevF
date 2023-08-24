@@ -17,3 +17,43 @@ Un array dinámico reservará un poco más de espacio del que necesita, y cuando
 reservará aún más espacio. Recuerda que la computadora tiene que buscar slots consecutivos 
 disponibles para asignar ese espacio y mientras más información haya guardada más difícil será 
 encontrar este espacio.
+
+Pilas (Stacks):
+
+1. Historial de Navegación en un Navegador: Las pilas se pueden utilizar para mantener un historial de páginas visitadas. Cada vez que el usuario navega a una nueva página, se agrega a la parte superior de la pila. Al hacer clic en el botón "Atrás", la página actual se retira de la parte superior de la pila.
+
+2. Manejo de Llamadas en Programación: Las pilas se utilizan en la administración de llamadas de funciones en muchos lenguajes de programación. Cuando una función se llama, se agrega a la pila. Cuando la función termina, se retira de la pila para volver al contexto anterior.
+
+3. Undo/Redo en Editores de Texto: En editores de texto, una pila puede almacenar los cambios realizados por el usuario. Cuando se realiza un cambio, se agrega a la pila. Si el usuario quiere deshacer una acción, se retira el cambio más reciente. Para rehacer, los cambios retirados se vuelven a agregar.
+
+4. Validación de Paréntesis: Las pilas se pueden utilizar para validar si un conjunto de paréntesis en una expresión está equilibrado. Cada vez que se encuentra un paréntesis de apertura, se agrega a la pila. Cuando se encuentra un paréntesis de cierre, se retira de la pila. Si la pila está vacía al final, los paréntesis están equilibrados.
+
+Colas (Queues):
+
+1. Procesamiento de Tareas en un Servidor: Las colas se utilizan para administrar tareas en un sistema de procesamiento de trabajos. Las tareas se agregan a la cola y se procesan en el orden en que se agregaron, siguiendo el principio "primero en entrar, primero en salir" (FIFO).
+
+2. Manejo de Pedidos en una Tienda en Línea: Las colas se usan para gestionar los pedidos en una tienda en línea. Los pedidos se agregan a la cola cuando se realizan y se procesan en orden. Esto garantiza que los pedidos se manejen en el orden en que se recibieron.
+
+3. Impresión de Documentos en una Impresora: Las colas se utilizan para administrar la impresión de documentos en una impresora compartida. Los documentos se agregan a la cola de impresión y se imprimen en el orden en que se agregaron.
+
+4. Búsqueda de Caminos en un Grafo: Las colas se usan en algoritmos de búsqueda de caminos, como el algoritmo de búsqueda en anchura (BFS). Las posibles ubicaciones se agregan a la cola y se exploran en orden, lo que permite encontrar el camino más corto en un grafo.
+
+5. Espera de Procesos en Sistemas Operativos: En sistemas operativos, las colas se utilizan para administrar la asignación de recursos a procesos. Los procesos esperan en una cola de espera para recibir acceso a recursos compartidos, como la CPU o dispositivos de E/S.
+
+ejemplos  menos tecnicos
+
+Pilas (Stacks):
+
+1. Pilas de Libros: Imagina que estás apilando libros uno encima del otro. El libro que colocas en la parte superior es el primero que puedes agarrar. Si quieres tomar un libro más abajo, necesitas quitar los libros de arriba uno por uno.
+
+2. Platos en un Buffet: Piensa en un buffet de comida. Los platos se apilan uno encima del otro. El plato que tomas primero es el que está en la parte superior. Cuando tomas un plato, los otros platos se quedan en la misma posición.
+
+3. Apilando Cartas: Cuando juegas a las cartas, apilas las cartas una encima de la otra. Si necesitas una carta específica, primero debes quitar las cartas que están en la parte superior de la pila para llegar a la carta que deseas.
+
+Colas (Queues):
+
+1. Fila en el Cine: Imagina que estás esperando para entrar a una película. Las personas están en una fila (cola) y entran una por una en el orden en que llegaron. La primera persona en la fila es la primera en entrar.
+
+2. Esperando en la Tienda de Helados: Cuando hay mucha gente esperando para comprar helado en una tienda, todos están en una fila (cola). El que llega primero es el primero en ser atendido y obtener su helado.
+
+3. Entrar al Autobús: Piensa en un autobús que recoge a pasajeros en una parada. Las personas hacen una cola (cola) para subir al autobús. El primero en llegar a la parada es el primero en subir al autobús.
