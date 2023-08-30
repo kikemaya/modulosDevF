@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evento scroll</title>
+    <style>
+      body {
+        height: 2000px; /* Añade espacio para hacer scroll */
+      }
+      #output {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background-color: lightgray;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="output">Desplázate para ver el evento scroll</div>
+
+    <script>
+      const output = document.getElementById("output");
+
+      // Evento scroll
+      window.addEventListener("scroll", () => {
+        output.textContent = `Desplazamiento vertical: ${window.scrollY}px`;
+      });
+    </script>
+  </body>
+</html>
