@@ -1,0 +1,1 @@
+el operador de propagación se usa para expandir elementos o propiedades en múltiples partes, mientras que el operador de reunión se utiliza para agrupar elementos o argumentos en una sola entidad. Ambos operadores son útiles en diferentes contextos y desempeñan roles opuestos.

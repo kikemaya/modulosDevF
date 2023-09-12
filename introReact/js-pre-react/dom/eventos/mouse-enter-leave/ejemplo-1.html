@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos mouseenter y mouseleave</title>
+  </head>
+  <body>
+    <div
+      id="box"
+      style="width: 200px; height: 200px; background-color: lightblue"
+    ></div>
+    <p id="output">Pasa el mouse sobre el cuadro</p>
+
+    <script>
+      const box = document.getElementById("box");
+      const output = document.getElementById("output");
+
+      // Evento mouseenter
+      box.addEventListener("mouseenter", () => {
+        box.style.backgroundColor = "lightgreen";
+        output.textContent = "Mouse dentro del cuadro";
+      });
+
+      // Evento mouseleave
+      box.addEventListener("mouseleave", () => {
+        box.style.backgroundColor = "lightblue";
+        output.textContent = "Pasa el mouse sobre el cuadro";
+      });
+    </script>
+  </body>
+</html>

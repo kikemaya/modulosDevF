@@ -1,0 +1,16 @@
+Modifica el array original: forEach() itera sobre los elementos del array original y ejecuta una función proporcionada, pero no crea un nuevo array. Si modificas los elementos dentro de la función, estos cambios afectarán al array original.
+
+No devuelve un nuevo array: forEach() no devuelve un nuevo array con los resultados de la función. Devuelve undefined. Por lo tanto, es adecuado para realizar tareas que no requieren generar un nuevo array.
+
+Uso común: Se utiliza comúnmente cuando se necesita realizar acciones o tareas sobre los elementos de un array sin necesidad de crear un nuevo array. Por ejemplo, la impresión de elementos o la actualización de los elementos del array original.
+
+map():
+
+    Crea un nuevo array: map() también itera sobre los elementos del array original y ejecuta una función proporcionada, pero a diferencia de forEach(), devuelve un nuevo array con los resultados de aplicar la función a cada elemento.
+
+    No modifica el array original: Dado que map() crea un nuevo array, el array original no se modifica. Cualquier cambio que realices afectará al nuevo array, dejando el original intacto.
+
+    Devuelve un nuevo array: map() es adecuado cuando necesitas transformar los elementos de un array y obtener un nuevo array con los resultados de la transformación.
+
+
+En resumen, la principal diferencia entre forEach() y map() es que forEach() se utiliza para realizar acciones sobre los elementos del array original sin crear un nuevo array, mientras que map() se utiliza para transformar los elementos del array original y generar un nuevo array con los resultados de la transformación.
