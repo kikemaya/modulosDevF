@@ -38,7 +38,7 @@
     </title>
   </head>
   <body>
-    <h1>Comandos para configurar un linter y un code formatter con React</h1>
+    <h1>Pasos para configurar un linter(ESLint) y un code formatter(Prettier) con React</h1>
     <p>
       A continuación se presentan los comandos para configurar ESLint y Prettier
       en tu proyecto de React:
@@ -62,7 +62,7 @@
     <p><strong>6. Formatear y sobrescribir el archivo con Prettier:</strong></p>
     <code>npx prettier src/main.jsx --write</code>
 
-    <p><strong>7. Crear archivos de configuración:</strong></p>
+    <p><strong>7. Si aún no existen, crea los siguientes archivos de configuración:</strong></p>
 
     <p>Crear archivo <code>.eslintrc.js</code>:</p>
     <pre><code>module.exports = {
@@ -73,9 +73,38 @@
     };</code></pre>
     <p>Crear archivo <code>.prettierrc.js</code>:</p>
     <pre><code>module.exports = {
+      useTabs: true,
+      semi: true,
       singleQuote: true,
+      jsxSingleQuote: true,
+      arrowParens: true,
       trailingComma: 'es5',
     };</code></pre>
+
+    <p>
+      <strong>¡Tip! Contamos con el comando "npx prettier . --check":</strong>
+    </p>
+    <p>
+      se utiliza para verificar si los archivos en el directorio actual y sus
+      subdirectorios cumplen con las reglas de formato establecidas por Prettier
+      sin aplicar cambios, mostrando mensajes de error en caso de
+      incumplimiento.
+    </p>
+
+    <p>
+      <strong
+        >¡IMPORTANTE! Crear los archivos ".prettierignore" y
+        ".eslintignore":</strong
+      >
+    </p>
+    <p>
+      Esto permite especificar qué archivos o directorios deben ser excluidos de
+      las reglas de formato de Prettier y las reglas de ESLint, respectivamente,
+      para evitar cambios y análisis innecesarios en ciertos archivos dentro de
+      nuestros proyectos. Como recomendacion personal, coloca para ignorar en
+      ambos archivos la carpeta "dist" y en el archivo ".prettierignore",
+      tambien ignora el "package-lock.json"
+    </p>
 
     <p><strong>8. Instalar "npm i -D eslint-config-prettier":</strong></p>
     <p>
@@ -85,9 +114,37 @@
       coherente y se mantienen las convenciones de calidad de código en el
       proyecto.
     </p>
+
     <p>
       <strong
-        >. Configurar scripts en el archivo <code>package.json</code>:</strong
+        >9. Añade la configuracion "eslint-config-prettier" al archivo
+        ".eslintrc.cjs":</strong
+      >
+    </p>
+    <p>
+      En tu archivo ".eslintrc.cjs", agrega una sección "extends" si aún no la
+      tienes, y dentro de ella, agrega "eslint-config-prettier". Esto debe verse
+      algo así:
+      <pre>
+        <code>
+module.exports = { 
+  extends: ["eslint:recommended", "eslint-config-prettier"],
+  // ... otras configuraciones de ESLint ... 
+};
+</code>  
+      </pre>
+      Asegúrate de que "eslint-config-prettier" esté incluido en el array bajo
+      "extends". Esto significa que estás extendiendo las reglas recomendadas de
+      ESLint y, al mismo tiempo, desactivando cualquier regla que entre en
+      conflicto con las reglas de formato de Prettier. Con estos pasos, has
+      añadido "eslint-config-prettier" a tu configuración ESLint, lo que asegura
+      que ESLint y Prettier trabajen juntos de manera armoniosa, evitando
+      conflictos de reglas de formato en tu código.
+    </p>
+
+    <p>
+      <strong
+        >10. Configurar scripts en el archivo <code>package.json</code>:</strong
       >
     </p>
 
@@ -117,6 +174,39 @@
     <p>
       Para una experiencia más fluida, integra las extenciones de ESLint y
       Prettier con tu editor de código.
+    </p>
+    <p>
+      <strong>Configura las preferencias de Prettier:</strong>
+    </p>
+    <p>
+      Abre el archivo de configuración de Visual Studio Code (puedes hacerlo
+      presionando Ctrl + , o Cmd + , en Mac), en el apartado "User" busca la
+      opción "Text Editor: Formatting" y habilita la opción "Format On save"
+      para aplicar las reglas de prettier cada vez que guardes tus cambios.
+    </p>
+    <p><strong>¡Tip! ¿Cómo corregir el mensaje "Warning: React version not specified in eslint-plugin-react settings", cuando ejecutamos eslint?:</strong></p>
+    <p>
+      es una advertencia de ESLint que indica que en tu configuración de ESLint, específicamente en la configuración del plugin eslint-plugin-react, no se ha especificado la versión de React que estás utilizando en tu proyecto. Para solucionar esta advertencia, sigue estos pasos:
+      <ol>
+        <li>
+          Abre tu archivo de configuración de ESLint, que generalmente se llama .eslintrc.js, .eslintrc.json, o .eslintrc.cjs, según cómo hayas configurado tu proyecto.
+        </li>
+      
+        <li>
+          Dentro del archivo, agrega una propiedad llamada "settings" que va a ser un objeto literal, dentro coloca otra propiedad de tipo objeto que tendrá el nombre "react" y agrega dentro la propiedad "version" con el valor "detect". Por ejemplo:
+          <pre>
+            <code>
+  "settings": {
+    "react": {
+      "version": "detect" // O puedes especificar la versión de React que estás utilizando, por ejemplo, "16.8"
+    }
+  }
+            </code>
+          </pre>
+
+        </li>
+      </ol>
+      Si usas "detect", ESLint tratará de detectar automáticamente la versión de React que estás utilizando en tu proyecto. Con estos pasos, has especificado la versión de React que estás utilizando en tu proyecto en la configuración del plugin eslint-plugin-react, lo que debería resolver la advertencia "Warning: React version not specified in eslint-plugin-react settings". Esto es importante para que ESLint pueda aplicar las reglas de React adecuadas para la versión que estás utilizando.
     </p>
   </body>
 </html>
